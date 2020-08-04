@@ -1,0 +1,30 @@
+{
+	"info": {
+		"_postman_id": "56200019-dd22-4a93-96f9-df303373b0f3",
+		"name": "Configserver",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "restaurant-service-dev",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:51000/restaurant-service/dev",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51000",
+					"path": [
+						"restaurant-service",
+						"dev"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

@@ -1,0 +1,431 @@
+{
+	"info": {
+		"_postman_id": "b0d62e3a-a86e-4b20-b017-898ca253e5d0",
+		"name": "RestaurantSearchService",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "LOGIN",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"username\":\"user\",\r\n\"password\":\"password\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllRestaurants",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyIiwicm9sZXMiOiJ1c2VyIiwiaWF0IjoxNTkzNDk3NDYyLCJleHAiOjE1OTM0OTgzNjJ9.sNWZ5QB6x6kHS7kd8BP57qebTP9VK3ZWt1nxkyHYv3Y",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/restaurants",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"restaurants"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddRestaurant",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyIiwicm9sZXMiOiJ1c2VyIiwiaWF0IjoxNTkzNTAzMDkwLCJleHAiOjE1OTM1MDM5OTB9.2YnOAYosbqjhjCCgaweQ82UXUg8Tj_P6Jqul07f2RSo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n            \r\n            \"name\": \"KFC\",\r\n            \"location\": \"rr nagar\",\r\n            \"cuisine\": \"Soproler\",\r\n            \"budget\": 966,\r\n            \"rating\": 4.5,\r\n            \"activeFrom\":\"Morning\",\r\n            \"activeTill\":\"MidNight\"\r\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/restaurant",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"restaurant"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetRestaurantsByName",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyIiwicm9sZXMiOiJ1c2VyIiwiaWF0IjoxNTkzNDk4MTM0LCJleHAiOjE1OTM0OTkwMzR9.jaOURexd7rx7tqLNGio9ksrRYtDir7KDPrhu9eGnO1U",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/restaurants/name/kfc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"restaurants",
+						"name",
+						"kfc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetRestaurantsByLocationCuisine",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyIiwicm9sZXMiOiJ1c2VyIiwiaWF0IjoxNTkzNDk4NDM0LCJleHAiOjE1OTM0OTkzMzR9.xrsG0378pfJAvIpWitukAr-1CYr59c8QTge1QIGDRNE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/restaurants/location/kormangala/cuisine/indian",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"restaurants",
+						"location",
+						"kormangala",
+						"cuisine",
+						"indian"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetRestaurantsByLocationName",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyIiwicm9sZXMiOiJ1c2VyIiwiaWF0IjoxNTkzNDk4NjY2LCJleHAiOjE1OTM0OTk1NjZ9.BOAB7S2oI_Dlha4kqMupWypA4icskquSJvXyT8rUswQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/restaurants/name/re/location/kormangala",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"restaurants",
+						"name",
+						"re",
+						"location",
+						"kormangala"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetRestaurantsByBudget",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyIiwicm9sZXMiOiJ1c2VyIiwiaWF0IjoxNTkzNDk5MTAxLCJleHAiOjE1OTM1MDAwMDF9.KXC8JLShNJdOp2vTcCFgAPLyabNBBxE2zf-jr2oyyUc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/restaurants/budget/966",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"restaurants",
+						"budget",
+						"966"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetRestaurantsByRating",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyIiwicm9sZXMiOiJ1c2VyIiwiaWF0IjoxNTkzNDk5MjI5LCJleHAiOjE1OTM1MDAxMjl9.55wOVp42mz8cObhJXiB284hQ5IvR94BlbRPoMMfuPOk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/restaurants/rating/4.9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"restaurants",
+						"rating",
+						"4.9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetItemsByRestaurantId",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyIiwicm9sZXMiOiJ1c2VyIiwiaWF0IjoxNTkzNTE3NzkwLCJleHAiOjE1OTM1MTg2OTB9.P38LnHs3I6_uuSSr6qcfEIcSuWfMdXZ6jN5HlsOXpvQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/restaurant/items/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"restaurant",
+						"items",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddItemsToRestaurantMenu-MenuItemController",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyIiwicm9sZXMiOiJ1c2VyIiwiaWF0IjoxNTkzNTA2OTMyLCJleHAiOjE1OTM1MDc4MzJ9.UwehJneKr-Gf7bYplaNk7wXtYykeaBwGZBarmylnweE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"description\": \"Must Have\",\r\n  \"menuId\": 2,\r\n  \"name\": \"Bhajji\",\r\n  \"price\": 100\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/item",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"item"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetRestaurantsContainingItem",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyIiwicm9sZXMiOiJ1c2VyIiwiaWF0IjoxNTkzNTA4NzEyLCJleHAiOjE1OTM1MDk2MTJ9.ErKzneMXQ_wNnIgpt6bsq82Ua3MsICk8WfDKUm2BWa0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/restaurant/item/name/CB",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"restaurant",
+						"item",
+						"name",
+						"CB"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetItemById",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyIiwicm9sZXMiOiJ1c2VyIiwiaWF0IjoxNTkzNTEyNDE4LCJleHAiOjE1OTM1MTMzMTh9.01CMYkLJlermW1i8hCkmW1zV65HWOypJiJ-DkDbqTYc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/item/id/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"item",
+						"id",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login-docker",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"username\":\"user\",\r\n\"password\":\"password\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://gdjhq51309dns.eastus2.cloudapp.azure.com:8080/login",
+					"protocol": "http",
+					"host": [
+						"gdjhq51309dns",
+						"eastus2",
+						"cloudapp",
+						"azure",
+						"com"
+					],
+					"port": "8080",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

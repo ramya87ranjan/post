@@ -1,0 +1,72 @@
+{
+	"info": {
+		"_postman_id": "ae0a2294-f30c-4add-aca4-3027d9d272c2",
+		"name": "zuul restaurant",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetAllRestaurants",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyIiwicm9sZXMiOiJ1c2VyIiwiaWF0IjoxNTkzNTk0NjU1LCJleHAiOjE1OTM1OTU1NTV9.zSc34aYvy26pcmI94cX1HOOfUfvt5VC3clEuD-6eGDU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8765/restaurantapi/restaurants",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"restaurantapi",
+						"restaurants"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetrestaurantsByrating",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyIiwicm9sZXMiOiJ1c2VyIiwiaWF0IjoxNTk0MjkzMDcxLCJleHAiOjE1OTQyOTM5NzJ9.UEM8nVOY8McN1ZRzFCrliMbhAGv6tS4rg_IGICc9QU4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8765/restaurantapi/restaurants/rating/4.9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"restaurantapi",
+						"restaurants",
+						"rating",
+						"4.9"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

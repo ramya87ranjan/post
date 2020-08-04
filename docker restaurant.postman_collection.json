@@ -1,0 +1,148 @@
+{
+	"info": {
+		"_postman_id": "6651c061-5871-457f-8374-6c2c3e655877",
+		"name": "docker restaurant",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "docker getall restaurants",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyIiwicm9sZXMiOiJ1c2VyIiwiaWF0IjoxNTk0Mjc4ODg0LCJleHAiOjE1OTQyNzk3ODR9.6XwjqyNyUGW7WVyGTAmder7k2_U9U6TZd5K0QHfxP5I",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://gdjhq51309dns.eastus2.cloudapp.azure.com:8080/restaurants",
+					"protocol": "http",
+					"host": [
+						"gdjhq51309dns",
+						"eastus2",
+						"cloudapp",
+						"azure",
+						"com"
+					],
+					"port": "8080",
+					"path": [
+						"restaurants"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getrestaurantbyratings",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyIiwicm9sZXMiOiJ1c2VyIiwiaWF0IjoxNTk0Mjc4ODg0LCJleHAiOjE1OTQyNzk3ODR9.6XwjqyNyUGW7WVyGTAmder7k2_U9U6TZd5K0QHfxP5I",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://gdjhq51309dns.eastus2.cloudapp.azure.com:8080/restaurants/rating/4.5",
+					"protocol": "http",
+					"host": [
+						"gdjhq51309dns",
+						"eastus2",
+						"cloudapp",
+						"azure",
+						"com"
+					],
+					"port": "8080",
+					"path": [
+						"restaurants",
+						"rating",
+						"4.5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getallrestaurantsZuul",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyIiwicm9sZXMiOiJ1c2VyIiwiaWF0IjoxNTk0MzA2NjI2LCJleHAiOjE1OTQzMDc1MjZ9.taYzQqmzvvtrSt-2J21OZmiudr8QLzossql-XzMzDN4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://gdjhq51309dns.eastus2.cloudapp.azure.com:8765/restaurantapi/restaurants",
+					"protocol": "http",
+					"host": [
+						"gdjhq51309dns",
+						"eastus2",
+						"cloudapp",
+						"azure",
+						"com"
+					],
+					"port": "8765",
+					"path": [
+						"restaurantapi",
+						"restaurants"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ZuulGetRestaurantsByRatings",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyIiwicm9sZXMiOiJ1c2VyIiwiaWF0IjoxNTk0MzA2NjI2LCJleHAiOjE1OTQzMDc1MjZ9.taYzQqmzvvtrSt-2J21OZmiudr8QLzossql-XzMzDN4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://gdjhq51309dns.eastus2.cloudapp.azure.com:8765/restaurantapi/restaurants/rating/4.5",
+					"protocol": "http",
+					"host": [
+						"gdjhq51309dns",
+						"eastus2",
+						"cloudapp",
+						"azure",
+						"com"
+					],
+					"port": "8765",
+					"path": [
+						"restaurantapi",
+						"restaurants",
+						"rating",
+						"4.5"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

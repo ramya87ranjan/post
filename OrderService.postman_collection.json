@@ -1,0 +1,171 @@
+{
+	"info": {
+		"_postman_id": "631e62a6-44e9-4c9d-bfec-d9824ad181b8",
+		"name": "OrderService",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "PlaceOrder",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyIiwicm9sZXMiOiJ1c2VyIiwiaWF0IjoxNTkzNTEyNzkwLCJleHAiOjE1OTM1MTM2OTB9.Z1fSq6uzf0cpD9idW__BjLgoWlWhjjDm8_K_NAi9mjY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"customerId\": 10,\r\n  \"items\": [\r\n    {\r\n      \"itemId\": 1,\r\n      \"quantity\": 5\r\n    }\r\n  ],\r\n  \"restaurantId\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/order",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetOrderById",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyIiwicm9sZXMiOiJ1c2VyIiwiaWF0IjoxNTkzNTE3NzkwLCJleHAiOjE1OTM1MTg2OTB9.P38LnHs3I6_uuSSr6qcfEIcSuWfMdXZ6jN5HlsOXpvQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/order/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"order",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetOrderAmountByOrderId",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyIiwicm9sZXMiOiJ1c2VyIiwiaWF0IjoxNTkzNTEzNDk0LCJleHAiOjE1OTM1MTQzOTR9.6V2DMODf6KxStreB3NDtPHkUOd_4dd05uw8HQ-UqU8E",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/order/value/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"order",
+						"value",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CancelOrder",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyIiwicm9sZXMiOiJ1c2VyIiwiaWF0IjoxNTkzNTEzODQ4LCJleHAiOjE1OTM1MTQ3NDh9.Oksze_NdFrjTt3MmwNPAf5SU-UVayH8NpqPDVneaEU0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/order/cancel/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"order",
+						"cancel",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetOrderById-zuul",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyIiwicm9sZXMiOiJ1c2VyIiwiaWF0IjoxNTkzNTUzMTY1LCJleHAiOjE1OTM1NTQwNjV9.Lrifzm5C5gXT5ehmmyTXWACwVwBd88Q05jICTIQiQ9A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8765/ordered/order/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"ordered",
+						"order",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
